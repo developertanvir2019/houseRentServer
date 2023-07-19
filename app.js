@@ -206,8 +206,21 @@ app.post('/api/houses', async (req, res) => {
 
 app.get('/api/houses', async (req, res) => {
     try {
-        const houses = await House.find().exec();
-        res.json(houses);
+        const page = parseInt(req.query.page) || 1;
+        const limit = 10; // Show 10 items per page
+        const startIndex = (page - 1) * limit;
+        const endIndex = page * limit;
+
+        const houses = await House.find().skip(startIndex).limit(limit).exec();
+
+        const totalHousesCount = await House.countDocuments().exec();
+
+        const paginationInfo = {
+            currentPage: page,
+            totalPages: Math.ceil(totalHousesCount / limit),
+        };
+
+        res.json({ houses, paginationInfo });
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: 'Server error' });
