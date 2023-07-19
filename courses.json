@@ -1,0 +1,56 @@
+[
+    {
+        "category_id": "1",
+        "total_enrolled": "5.5k",
+        "total_view": 488,
+        "title": "HTML 5",
+        "mentor_name": "Jimmy Dane",
+        "thumbnail_url": "https://media.istockphoto.com/photos/html5-picture-id158533489?b=1&k=20&m=158533489&s=612x612&w=0&h=lV1U878bjaxRwB4OXKdinm_MztUARKcTWaVGYOsaKHI=",
+        "details": "HTML5 is a markup language used for structuring and presenting content on the World Wide Web. It is the fifth and final major HTML version that is a World. This is most useful for web development."
+    },
+    {
+        "category_id": "2",
+        "total_enrolled": "3.8 k",
+        "total_view": 488,
+        "title": "CSS 3",
+        "mentor_name": "Daney Joe",
+        "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVJEoN6YGmPnpHE_nheBbrTaWqFVTAUvbD7Q&usqp=CAU",
+        "details": "CSS (Cascading Style Sheets) is used to style and layout web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features."
+    },
+    {
+        "category_id": "3",
+        "total_enrolled": "4.0k",
+        "total_view": 488,
+        "title": "Bootstrap",
+        "mentor_name": "Mir Hossain",
+        "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt4Qv4f84Q4EYCCbq4PcfCRSPDhVS-kFAX-w&usqp=CAU",
+        "details": "Bootstrap  utilizes Sass for a modular and customizable architecture. Import only the components you need, enable global options like gradients and shadows , and and shadows.. Bootstrap is use for build website .This is an css frameWork"
+    },
+    {
+        "category_id": "4",
+        "total_enrolled": "2.5k",
+        "total_view": 318,
+        "title": "JavaScript",
+        "mentor_name": "Jhankar Mahbub",
+        "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTP_RBWniG6RLuxBFaaQFguZB9ycs_w6Xbjw&usqp=CAU",
+        "details": "JavaScript is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive. Where HTML and CSS are languages that give structure and style to web pages, JavaScript gives web pages interactive elements that engage a user."
+    },
+    {
+        "category_id": "5",
+        "total_enrolled": "2.4k",
+        "total_view": 488,
+        "title": "GitHub",
+        "mentor_name": "Jesm Nesam ",
+        "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOn7EFsNVuv0h3UoryCNfpMuSO7o8qq2Y75A&usqp=CAU",
+        "details": "GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere. This tutorial teaches you GitHub essentials like repositories, branches, commits, and pull requests."
+    },
+    {
+        "category_id": "6",
+        "total_enrolled": "2.1k",
+        "total_view": 488,
+        "title": "React",
+        "mentor_name": "RS Fahim",
+        "thumbnail_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj2jma2z7jmk1gd8J1Ty4W29QlPs_lc8w1aA&usqp=CAU",
+        "details": "The React. js framework is an open-source JavaScript framework and library developed by Facebook. It's used for building interactive user interfaces and web applications quickly and efficiently with significantly less code than you would with vanilla JavaScript."
+    }
+]
