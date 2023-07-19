@@ -4,6 +4,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const ObjectId = require('mongodb').ObjectId;
 
 const app = express();
 app.use(express.json());
@@ -188,6 +189,10 @@ app.get('/api/getUserByPhoneNumber/:phoneNumber', async (req, res) => {
     }
 });
 
+
+
+// ******* Houses Api *************
+
 app.post('/api/houses', async (req, res) => {
     try {
         const houseData = req.body;
@@ -215,6 +220,23 @@ app.get('/api/houses/:userPhone', async (req, res) => {
         const userPhone = req.params.userPhone;
         const houses = await House.find({ userPhone }).exec(); // Use .exec() to force execution as a promise
         res.json(houses);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: 'Server error' });
+    }
+});
+
+app.get('/api/house/:id', async (req, res) => {
+    try {
+        const id = req.params.id;
+        if (!ObjectId.isValid(id)) {
+            return res.status(400).json({ message: 'Invalid ID' });
+        }
+        const house = await House.findById(id).exec();
+        if (!house) {
+            return res.status(404).json({ message: 'House not found' });
+        }
+        res.json(house);
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: 'Server error' });
@@ -258,7 +280,7 @@ app.put('/api/house/:id', async (req, res) => {
 });
 
 
-
+// ******* Booking Api *********
 
 app.post('/api/booking', async (req, res) => {
     try {
@@ -276,6 +298,17 @@ app.get('/api/booking/:queryPhone', async (req, res) => {
     try {
         const queryPhone = req.params.queryPhone;
         const bookings = await Booking.find({ queryPhone }).exec(); // Use .exec() to force execution as a promise
+        res.json(bookings);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: 'Server error' });
+    }
+});
+
+app.get('/api/ownerBooking/:phoneNumber', async (req, res) => {
+    try {
+        const phoneNumber = req.params.phoneNumber;
+        const bookings = await Booking.find({ phoneNumber }).exec(); // Use .exec() to force execution as a promise
         res.json(bookings);
     } catch (err) {
         console.error(err);
